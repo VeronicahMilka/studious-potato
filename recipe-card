@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Recipe Card Collection</title>
+  <style>
+    /* FIXED: Added the * selector here so box-sizing and margins reset properly */
+    * {
+      box-sizing: border-box; 
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f9fa;
+      color: #333;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    header h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: #7f8c8d;
+      font-size: 1.1rem;
+    }
+
+    .recipe-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .recipe-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+      display: flex; 
+      flex-direction: column; 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe-image {
+      position: relative;
+      height: 200px; 
+    }
+
+    .recipe-image img {
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
+
+    .recipe-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background-color: #e67e22;
+      color: #fff;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 20px;
+    }
+
+    .recipe-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1; 
+    }
+
+    .recipe-title {
+      font-size: 1.3rem; 
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+
+    .recipe-meta {
+      display: flex; 
+      gap: 1rem; 
+      font-size: 0.85rem;
+      color: #7f8c8d;
+      margin-bottom: 1rem;
+    }
+
+    .recipe-description {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .recipe-btn {
+      margin-top: auto; 
+      background-color: #2ec4b6;
+      color: white;
+      text-align: center;
+      padding: 0.75rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    .recipe-btn:hover {
+      background-color: #0f9f90; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Recipe Collection</h1>
+    <p>A curated gallery of delicious homemade meals</p>
+  </header>
+
+  <main class="recipe-grid">
+
+    <!-- Recipe Card 1 -->
+    <article class="recipe-card">
+      <div class="recipe-image">
+        <span class="recipe-tag">Dinner</span>
+        <!-- FIXED: Added full Unsplash placeholder images -->
+        <img src="https://unsplash.com" alt="Creamy Garlic Salmon">
+      </div>
+      <div class="recipe-content">
+        <h2 class="recipe-title">Creamy Garlic Salmon</h2>
+        <div class="recipe-meta">
+          <span>25 mins</span>
+          <span>420 kcal</span>
+        </div>
+        <p class="recipe-description">Pan-seared fresh salmon fillets simmered in a rich, velvety garlic and spinach cream sauce. Perfect for a quick weeknight dinner.</p>
+        <a href="#" class="recipe-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <!-- Recipe Card 2 -->
+    <article class="recipe-card">
+      <div class="recipe-image">
+        <span class="recipe-tag">Dessert</span>
+        <img src="https://unsplash.com" alt="Fudgy Chocolate Brownies">
+      </div>
+      <div class="recipe-content">
+        <h2 class="recipe-title">Fudgy Chocolate Brownies</h2>
+        <div class="recipe-meta">
+          <span>40 mins</span>
+          <span>290 kcal</span>
+        </div>
+        <p class="recipe-description">Rich, chewy, and loaded with melted chocolate chunks. These classic brownies feature a perfectly crinkly top crust.</p>
+        <a href="#" class="recipe-btn">View Recipe</a>
+      </div>
+    </article>
+
+    <!-- Recipe Card 3 -->
+    <article class="recipe-card">
+      <div class="recipe-image">
+        <span class="recipe-tag">Breakfast</span>
+        <img src="https://unsplash.com" alt="Avocado Toast with Egg">
+      </div>
+      <div class="recipe-content">
+        <h2 class="recipe-title">Avocado Toast with Egg</h2>
+        <div class="recipe-meta">
+          <span> 10 mins</span>
+          <span>310 kcal</span>
+        </div>
+        <p class="recipe-description">Crispy toasted sourdough bread topped with creamy mashed avocado, a perfectly poached egg, and a sprinkle of red pepper flakes.</p>
+        <a href="#" class="recipe-btn">View Recipe</a>
+      </div>
+    </article>
+
+  </main>
+
+</body>
+</html>
